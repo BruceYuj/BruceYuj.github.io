@@ -16,16 +16,20 @@ This project is a hexo theme named skapp.
 >  the default path of the following operations is your hexo blog project directory, please enter the project.
 
 2. use `git` to clone `hexo-theme-skapp` into the theme folder under your blog project directory.
-`cd theme`
-`git clone https://github.com/Mrminfive/hexo-theme-skapp.git`
+```shell
+cd theme
+git clone https://github.com/Mrminfive/hexo-theme-skapp.git
+```
 
 3. To modify the root `_config.yml` and install node dependencies.
 ```shell
 npm install --save-dev hexo-autoprefixer hexo-filter-cleanup hexo-generator-feed hexo-generator-sitemap hexo-renderer-sass hexo-renderer-swig mamboer/lunr.js moment node-sass object-assign
 ```
 **note**: If your OS is Windows, you may meet some problems when install the `mamboer/lunr.js`(because of the package`nodejieba`). To fix this problem, you should install `node-gyp`.
-`npm install --global windows-build-tools`
-`npm install -g node-gyp`
+```shell
+npm install --global windows-build-tools
+npm install -g node-gyp
+```
 
 Then configure the root `_config.yml` file:
 ```yml
@@ -101,6 +105,7 @@ To edit the root `_config.yml` file:
 language: zh-cn
 ```
 Now, skapp support two kinds of language:
+
 | language|  code  |
 | ------- | ----- |
 | English | en |
@@ -116,6 +121,7 @@ menu:
 ```
 
 Default menu items：
+
 | key | value | dispaly text|
 | --- | ----- | ---------------- |
 | home | home: / | home |
@@ -226,6 +232,7 @@ about:
 
 #### contact information configuration
 create `contact.yml` under the `/source/_data` (This configuration will create links in the page footer):
+
 ![contact-img](http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-contact.png)
 
 ``` yml
@@ -252,8 +259,8 @@ create `contact.yml` under the `/source/_data` (This configuration will create l
 
 #### external link configuration
 create `footer_link.yml` under the `source/_data` directory(This configuration will create links in the page footer):
-![footer-link]([footer-link]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-footer.png
-)
+![footer-link](http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-footer.png)
+
 ``` yml
 firend_link:
   - name: hexo-theme-skapp
@@ -268,5 +275,89 @@ build_tools:
 `name` means the link value, `desc` means the link `title` attribute value.
 Each array in this file represents a list of link(e.g. firend_link). Skapp support multi-column links(you just need to edit your language configuration in the `hexo-theme-skapp/languages`).
 
+#### personalized configuration
+skapp uses `sass` precompiled style and packages all the baisc styles in the `_theme.scss` file under the `hexo-theme-skapp/source/scss` directory:
+``` scss
+/**
+ * blog theme 
+ */
 
+$main-color: #19abd6                                !default;
+$main-color--hover: lighten($main-color, 10%)       !default;
 
+$font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"PingFang SC","Lantinghei SC","Microsoft Yahei","Hiragino Sans GB","Microsoft Sans Serif","WenQuanYi Micro Hei",sans           !default;
+
+$main-fc: #666                                      !default;
+$main-fs: 14px                                      !default;
+$main-lh: 1.7                                       !default;
+
+$title-fc: #242f35                                  !default;
+
+$hint-fc: #19abd6                                   !default;
+
+$bgc--main: #fff                                    !default;
+$bgc--bottom: #2d383e                               !default;
+$bgc--footer: #242f35                               !default;
+
+$border-c: #d8e5f3                                  !default;
+
+$transition: .3s                                    !default;
+
+$mq-desktop--wide: 1280px                           !default;
+$mq-desktop: 980px                                  !default;
+$mq-mobile: 736px                                   !default;
+
+$pad: 15px                                          !default;
+
+$z-index--bottom: 1                                 !default;
+$z-index--center: 50                                !default;
+$z-index--top: 100                                  !default;
+```
+#### third-part service
+
+##### baidu statistics
+skapp has integrated baidu statistics. You need to get the id and edit the root `_config.yml` file:
+``` yml
+# Baidu statistic
+baidu_statistic: e3267498201dfa9699a5c509424709d6
+```
+
+##### busuanzi statistics
+skapp uses busuanzi to count page PV and closed by default. You can open this service by editing the `_config.yml` file:
+
+``` yml
+# Busuanzi
+busuanzi: true
+```
+
+##### global search
+skapp uses `lunr` to search in site and don't support configuration.
+
+##### rss
+to edit the root `_config.yml` file:
+``` yml
+# Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+```
+
+##### Comment system
+skapp has integrated [gitalk](https://github.com/gitalk/gitalk).
+If you want to use this comment function, you need to register the Github Application(follow the [gitalk document](https://github.com/gitalk/gitalk#usage)).
+Then to edit the `_config.yml` configuration:
+``` yml
+# Gitalk
+gitTalk:
+  clientId: ***
+  clientSecret: ***
+  repo: ***
+  owner: ***
+  admin: 
+    - ***
+```
