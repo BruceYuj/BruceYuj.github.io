@@ -8,9 +8,11 @@ install:
 
 before_script:
  - npm install -g gulp
-
+ - git config user.name "Bruce"
+ - git config user.email "444048170@qq.com"
 script:
   - hexo d
+
 
 # after_script:
 #   - cd ./public
