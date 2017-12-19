@@ -1,0 +1,17 @@
+friend_links:
+  - name: 凹凸实验室
+    desc: aotu
+    link: https://aotu.io/
+  - name: 淘宝FED
+    desc: 
+    link: http://taobaofed.org/
+  - name: 百度FEX
+    desc: 
+    link: http://fex.baidu.com/
+build_tools:
+  - name: Hexo
+    desc: Blog Framework
+    link: https://hexo.io/
+  - name: Skap
+    desc: Blog theme
+    link: https://github.com/Mrminfive/hexo-theme-skapp
