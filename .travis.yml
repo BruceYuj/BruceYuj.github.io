@@ -30,4 +30,4 @@ branches:
     - hexo
 env:
  global:
-   - GH_REF: https://github.com/BruceYuj/BruceYuj.github.io
+   - GH_REF: github.com/BruceYuj/BruceYuj.github.io
