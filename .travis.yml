@@ -11,17 +11,18 @@ before_script:
  - git config user.name "Bruce"
  - git config user.email "444048170@qq.com"
 script:
-  - hexo d
+  - hexo g
 
 
-# after_script:
-#   - cd ./public
-#   - git init
-#   - git config user.name "Bruce"
-#   - git config user.email "444048170@qq.com"
-#   - git add .
-#   - git commit -m "Update docs"
-#   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "Bruce"
+  - git config user.email "444048170@qq.com"
+  - git pull --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 # E: Build LifeCycle
 
 branches:
