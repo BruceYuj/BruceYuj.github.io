@@ -16,7 +16,7 @@ install:
 - npm install
 script:
 - hexo g
-- git push git@github.com:BruceYuj/BruceYuj.github.io.git hexo
+- git push git@github.com:BruceYuj/BruceYuj.github.io.git hexo:hexo
 after_success:
 - hexo deploy
 branches:
