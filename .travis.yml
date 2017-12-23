@@ -4,7 +4,7 @@ cache:
   directories:
   - node_modules
 before_install:
-- openssl aes-256-cbc -K $encrypted_02cc9860ffc3_key -iv $encrypted_02cc9860ffc3_iv
+- openssl aes-256-cbc -K $encrypted_0c8703cca11f_key -iv $encrypted_0c8703cca11f_iv
   -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
