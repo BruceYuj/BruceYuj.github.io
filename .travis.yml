@@ -5,10 +5,10 @@ cache:
   - node_modules
 before_install:
 - openssl aes-256-cbc -K $encrypted_02cc9860ffc3_key -iv $encrypted_02cc9860ffc3_iv
-  -in id_rsa_2.enc -out ~/.ssh/id_rsa_2 -d
-- chmod 600 ~/.ssh/id_rsa_2
+  -in id_rsa.enc -out id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa_2
+- ssh-add ~/.ssh/id_rsa
 - cp .travis/ssh_config ~/.ssh/config
 - git config --global user.name "Bruce"
 - git config --global user.email "444048170@qq.com"

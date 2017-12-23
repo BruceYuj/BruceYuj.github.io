@@ -4,5 +4,5 @@ db.json
 *.log
 node_modules/
 .deploy*/
-id_rsa_2
-id_rsa_2.pub
+id_rsa
+id_rsa.pub
