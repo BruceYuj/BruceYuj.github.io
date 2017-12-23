@@ -5,7 +5,7 @@ cache:
   - node_modules
 before_install:
 - openssl aes-256-cbc -K $encrypted_02cc9860ffc3_key -iv $encrypted_02cc9860ffc3_iv
-  -in id_rsa_2.enc -out id_rsa_2 -d
+  -in id_rsa_2.enc -out ~/.ssh/id_rsa_2 -d
 - chmod 600 ~/.ssh/id_rsa_2
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa_2
