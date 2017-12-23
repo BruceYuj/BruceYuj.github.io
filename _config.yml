@@ -178,7 +178,7 @@ theme: hexo-theme-skapp
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/BruceYuj/BruceYuj.github.io.git
+  repo: git@github.com:BruceYuj/BruceYuj.github.io.git
   branch: master
 
 # Feed Atom
