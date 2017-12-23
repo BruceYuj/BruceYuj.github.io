@@ -16,6 +16,7 @@ install:
 - npm install
 script:
 - hexo g
+- git checkout hexo
 - git add .
 - git commit -m "to update public directory"
 - git push git@github.com:BruceYuj/BruceYuj.github.io.git hexo:hexo
