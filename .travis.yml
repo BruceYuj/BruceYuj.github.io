@@ -28,7 +28,6 @@ after_success:
   - hexo deploy
 
 # E: Build LifeCycle
-
 branches:
   only:
     - hexo
