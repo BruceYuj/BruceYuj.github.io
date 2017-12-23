@@ -1,6 +1,5 @@
-//输入以下信息
 Host github.com
 User git
 StrictHostKeyChecking no
-IdentityFile ~/.ssh/id_rsa_2
+IdentityFile ~/.ssh/id_rsa
 IdentitiesOnly yes
