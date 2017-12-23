@@ -3,6 +3,6 @@ Thumbs.db
 db.json
 *.log
 node_modules/
-.deploy*/
+.deploy*
 id_rsa
 id_rsa.pub
