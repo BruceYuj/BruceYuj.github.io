@@ -1,33 +1,37 @@
 language: node_js
 node_js: stable
 
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_fafe5fd7111f_key -iv $encrypted_fafe5fd7111f_iv -in .travis/id_rsa_2.enc -out ~/.ssh/id_rsa_2 -d
+  - chmod 600 ~/.ssh/id_rsa_2
+  - eval $(ssh-agent)
+  - ssh-add ~/.ssh/id_rsa_2
+  - cp .travis/ssh_config ~/.ssh/config
+  - git config --global user.name "Bruce"
+  - git config --global user.email "444048170@qq.com"  
+
 # S: Build Lifecycle
 install:
   - npm install
 
 
-before_script:
- - npm install -g gulp
- - git config user.name "Bruce"
- - git config user.email "444048170@qq.com"
 script:
+  - hexo clean
   - hexo g
 
 
-after_script:
-  - cd ./public
-  - git init
-  - git config user.name "Bruce"
-  - git config user.email "444048170@qq.com"
-  # - git pull --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+after_success:
+  - hexo deploy
+
 # E: Build LifeCycle
 
 branches:
   only:
     - hexo
-env:
- global:
-   - GH_REF: github.com/BruceYuj/BruceYuj.github.io
+
+
+
