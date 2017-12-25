@@ -4,5 +4,6 @@ db.json
 *.log
 node_modules/
 .deploy*
+public/
 id_rsa
 id_rsa.pub

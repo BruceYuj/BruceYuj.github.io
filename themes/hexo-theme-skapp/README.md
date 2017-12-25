@@ -313,6 +313,26 @@ $z-index--bottom: 1                                 !default;
 $z-index--center: 50                                !default;
 $z-index--top: 100                                  !default;
 ```
+
+#### blog basic usage
+To configure basic info  in your markdown blog file：
+```
+title: Hello World 
+cover: http://oxnuwmm3w.bkt.clouddn.com/hello-world.jpeg
+author: 
+  nick: BruceYJ
+  link: https://www.github.com/BruceYuj
+
+# If the article is reproduced, you need to increase the article source
+editor:
+  name: Minfive
+  link: https://www.github.com/Mrminfive
+
+# post subtitle in your index page
+subtitle: post introduction
+```
+`title` attribute is the blog's title. `cover` attribute is the blog's first picture and thumbnail. `author` attribute is the blog's author information and link.
+
 #### third-part service
 
 ##### statistics
