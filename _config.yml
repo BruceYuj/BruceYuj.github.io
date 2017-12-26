@@ -202,3 +202,12 @@ gitTalk:
 
 # Busuanzi
 busuanzi: true
+
+# Menu
+menu:
+  home: / 
+  archive: /archives
+  works: /demo
+  music: /music
+  writing: /writing
+  about: /about

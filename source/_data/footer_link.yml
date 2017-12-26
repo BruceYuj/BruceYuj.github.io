@@ -15,3 +15,6 @@ build_tools:
   - name: Skap
     desc: Blog theme
     link: https://github.com/Mrminfive/hexo-theme-skapp
+  - name: Travis CI
+    desc: auto deploying tool
+    link: https://travis-ci.org/
