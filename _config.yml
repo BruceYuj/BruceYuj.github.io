@@ -208,5 +208,6 @@ busuanzi: true
 menu:
   home: / 
   archive: /archives
+  tags: /tags
   works: /demo
   about: /about
