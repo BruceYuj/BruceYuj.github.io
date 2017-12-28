@@ -13,6 +13,8 @@ tags:
 - Hexo
 - Travis CI
 - Blog
+categories:
+- 博客
 ---
 
 ## 前言
