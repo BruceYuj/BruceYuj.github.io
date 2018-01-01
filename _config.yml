@@ -211,3 +211,9 @@ menu:
   tags: /tags
   works: /demo
   about: /about
+
+# Live2D
+live2d:
+  model: koharu
+  position: left
+  opacityDefault: 1

@@ -32,7 +32,7 @@
             {% include './_partial/common/back-top.swig' %}
         {% endblock %}
     </div>
-
+    {{ live2d() }}
     <!-- build:js /js/common.js -->
         <script type="text/javascript" src="js/common/utils.js"></script>
         <script type="text/javascript" src="js/common/pack.js"></script>
