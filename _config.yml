@@ -217,3 +217,14 @@ live2d:
   model: koharu
   position: left
   opacityDefault: 1
+  
+# toc
+toc:
+  maxdepth: 3
+  class: toc
+  slugify: transliteration
+  decodeEntities: false
+  anchor:
+    position: after
+    symbol: '#'
+    style: header-anchor
