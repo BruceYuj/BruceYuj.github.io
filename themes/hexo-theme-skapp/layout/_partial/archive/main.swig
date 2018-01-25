@@ -23,7 +23,7 @@
                 {% endfor %}
             </div>
         {% endfor %}
-        
+
         {{ s_paginator(3) }}
     </div>
 

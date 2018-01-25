@@ -112,6 +112,7 @@ hexo.extend.helper.register('s_paginator', function(size = 2) {
     let link = `${page.base}${this.config.pagination_dir}/%d/`
 
     let current = page.current;
+
     function renderItem({ str, link, title }) {
         return `
             <li class="paginator__item">
