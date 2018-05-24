@@ -1,7 +1,7 @@
 ---
 title: 试试讲明白pseudo-classes和pseudo-elements
 date: 2018/5/23 22:25:07
-cover: http://oxnuwmm3w.bkt.clouddn.com/2017-12-26/Hexo-and-travis.jpeg
+cover: http://omjol58k1.bkt.clouddn.com/pseudo-class-and-pseudo-element.png
 author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
