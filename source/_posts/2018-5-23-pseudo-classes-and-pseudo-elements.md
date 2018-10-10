@@ -10,10 +10,10 @@ editor:
   link: https://www.github.com/BruceYuj
 subtitle: 伪类和伪元素
 tags:
-- css
+- CSS
 
 categories:
-- css
+- CSS
 ---
 <!-- toc -->
 ## introduction
