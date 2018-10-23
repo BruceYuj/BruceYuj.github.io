@@ -94,7 +94,7 @@ box-shadow: 120px 80px 40px 20px #0ff;
 
 ## 应用
 1. 常见的立体阴影效果。但是并没有filter的drop-shadow效果更佳逼真
-2. 模拟多重边框。
+2. 模拟多重边框。[demo](https://codepen.io/lonekorean/pen/EdCjk)
 
 ## reference
 1.[w3c, box-shadow](https://drafts.csswg.org/css-backgrounds-3/#shadow-blur)
