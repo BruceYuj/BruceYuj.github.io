@@ -101,7 +101,7 @@ qrcode: http://oxnuwmm3w.bkt.clouddn.com/qrcode.png
 default_cover: http://oo12ugek5.bkt.clouddn.com/images/default_cover.png
 
 # header 的背景图
-header_cover: http://oxnuwmm3w.bkt.clouddn.com/banner-bg.jpeg
+header_cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/function.PNG
 
 # 404 页面的背景图
 error_page_bg: http://oxnuwmm3w.bkt.clouddn.com/404.jpeg
