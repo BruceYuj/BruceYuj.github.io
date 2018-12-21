@@ -1,7 +1,7 @@
 ---
 title: 深入理解Computer Science中的funarg problem
 date: 2018/12/20 22:23:07
-cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181220-first-class-function.png
+cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181220-understanding-funarg-problem.png
 author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
@@ -64,7 +64,7 @@ categories:
 - functional programming languages: 比如 Scheme， ML, Haskell, Scala都从语言层面上支持first-class functions. 在最早的functional language - lisp被创造的时候，很多关于first-class function的概念还没有被很合理的理解，这也导致lisp在早期实现first-class function是通过dynamically scoped来实现的。但是在后来的Common Lisp和scheme这两个dialect当中已经通过lexically scoped来实现first-class functions了.
 - 很多scripting language，比如Perl, Python, PHP, Lua,Javascript都支持first-class function.
 - 对于imperative languages，主要分为两个家族，Algol family和C family。具体区别看下面的图表。
-![first-class function](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181220-first-class%20function.png)
+![first-class function](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181220-first-class-function.png)
  
 ### non-local variable 和 closure
 > closure(闭包): 简单来讲，在编程语言当中, a closure (also lexical closure or function closure) 是指用来实现lexically scoped name binding(由first-class function造成)的一种技术.
