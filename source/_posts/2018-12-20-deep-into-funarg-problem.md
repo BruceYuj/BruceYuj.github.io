@@ -10,10 +10,10 @@ editor:
   link: https://www.github.com/BruceYuj
 subtitle: CSS3中的outline
 tags:
-- computer science
+- Computer Science
 
 categories:
-- computer science
+- Computer Science
 ---
 <!-- toc -->
 

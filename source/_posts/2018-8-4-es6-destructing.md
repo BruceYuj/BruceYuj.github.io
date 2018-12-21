@@ -1,7 +1,7 @@
 ---
 title: ES6基础 - destructing
 date: 2018/8/4 21:23:07
-cover: 
+cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/180804-ES6-Destructing.png
 author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
