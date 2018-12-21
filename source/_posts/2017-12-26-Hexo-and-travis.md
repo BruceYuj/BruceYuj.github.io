@@ -19,7 +19,7 @@ categories:
 <!-- toc -->
 ## 前言
 社交是每个人的欲望，而单从一个技术人员角度来讲，建立自己的技术博客也是一种重要的外界沟通。blog中的每篇博文都可以是自己一段时间的技术总结(最重要的是能够有规律的坚持下去)。
-![](http://oxnuwmm3w.bkt.clouddn.com/2017-12-26/socialization.jpeg)
+
 Anyway!首先我们来看看一个新手在第一次尝试搭建技术博客时可能会选择的技术方案：
 - wordpress + 云主机 + 插件(付费:目前aliyun 1核1G 330RMB/year左右,学生价120RMB/year左右，腾讯云类似)
 - jekyll + github pages + markdown(免费: github默认支持jekyll,可以直接将原生文件放到github上,github自动编译)
@@ -49,7 +49,7 @@ ok,选择好了方式，第一步肯定是在本地电脑搭建hexo。具体的�
 下面就DuangDuangDuang的介绍下[travis CI](https://travis-ci.org/),travis CI是一种构建和测试的自动化工具。从其简称CI就可以理解，Travis CI提供的是持续集成服务(Continuous Integration).它可以绑定github上面的项目，只要有新的代码提交，就会自动抓取，然后travis会提供一个运行环境，执行测试，完成构建并部署到服务器。
 
 通过travis CI，我们每次只要更新markdown文件，网站内容就能自动更新了。在这里就不具体的讲如何入门travis CI了，具体学习可以点击[travis CI官网](https://docs.travis-ci.com/)或者[阮一峰travis CI教程](http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html)
-![](http://oxnuwmm3w.bkt.clouddn.com/2017-12-26/success.jpeg)
+
 ## 详细搭建步骤
 我们在部署博客时，`hexo d`就可以搞定，但是问题在于Travis CI本身并没有对github库进行push操作的权限。如果我们直接将密钥直接放在开源库中，则相当于将代码库的提交权限开放给所有github的使用者，因此，我们需要一些加密操作。
 ### 1. travis本地环境搭建
