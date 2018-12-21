@@ -1,7 +1,7 @@
 ---
 title: 深入理解Computer Science中的funarg problem
 date: 2018/12/20 22:23:07
-cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181220-understanding-funarg-problem.png
+cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181220-first-class-function.png
 author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
