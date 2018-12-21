@@ -104,10 +104,10 @@ default_cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/head
 header_cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/head_cover.jpg
 
 # 404 页面的背景图
-error_page_bg: http://oxnuwmm3w.bkt.clouddn.com/404.jpeg
+error_page_bg: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/404.jpg
 
 # 页面加载loading图标
-loader_img: http://oo12ugek5.bkt.clouddn.com/blog/images/loader.gif
+loader_img: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/loading.gif
 
 # 站长信息
 author:

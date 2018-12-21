@@ -13,7 +13,7 @@ tags:
 - ES6
 
 categories:
-- javascript
+- JavaScript
 ---
 <!-- toc -->
 
