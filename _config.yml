@@ -95,10 +95,10 @@ logo: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/logo_1.png
 
 # 头像/二维码（用于显示在底部）二选一
 # avatar: http://oxnuwmm3w.bkt.clouddn.com/qrcode.png
-qrcode: http://oxnuwmm3w.bkt.clouddn.com/qrcode.png
+qrcode: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/qrcode.jpg
 
 # 文章的默认封面
-default_cover: http://oo12ugek5.bkt.clouddn.com/images/default_cover.png
+default_cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/head_cover.jpg
 
 # header 的背景图
 header_cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/head_cover.jpg

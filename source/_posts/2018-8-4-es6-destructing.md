@@ -1,7 +1,7 @@
 ---
 title: ES6基础 - destructing
 date: 2018/8/4 21:23:07
-cover: http://oxnuwmm3w.bkt.clouddn.com/destructing.png
+cover: 
 author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj

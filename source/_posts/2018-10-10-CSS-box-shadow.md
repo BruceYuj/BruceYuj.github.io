@@ -1,7 +1,7 @@
 ---
 title: 详细理解CSS的 box-shadow
 date: 2018/10/10 21:23:07
-cover: http://oxnuwmm3w.bkt.clouddn.com/181010/css-box-shadow.png
+cover: 
 author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
