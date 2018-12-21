@@ -58,7 +58,7 @@ border-bottom-right-radius: 60px 90px;
 box-shadow: 64px 64px 12px 40px rgba(0,0,0,0.4),
                      12px 12px 0px 8px rgba(0,0,0,0.4) inset;
 ```
-![](http://oxnuwmm3w.bkt.clouddn.com/181010/css-box-shadow-1.png)
+![](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181010-box-shadow-demo-1.png)
 
 ```css?linenums
 div {
@@ -70,7 +70,7 @@ box-shadow: 120px 80px 40px 20px #0ff;
 /* blur-size 和 spread-size 是可选的 (默认为 0) */
 }
 ```
-![](http://oxnuwmm3w.bkt.clouddn.com/181010/css-box-shadow-2.png)
+![](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181010-box-shadow-demo-2.png)
 ### shadow shape, spread, and blurring shadow edges
 从上面来看，我们基本了解了如何来使用`box-shadow`。但是一些具体的使用细节仍然是模糊的。
 比如：
@@ -84,7 +84,7 @@ box-shadow: 120px 80px 40px 20px #0ff;
 1. `outer box-shadow`: 假设spread distance为0. outer box-shadow的形状完美覆盖元素的border box.
 2. `inner box-shadow` 同样假设spread distance为0.inner box-shadow的形状完美覆盖元素的padding box.
 
-![基本使用](http://oxnuwmm3w.bkt.clouddn.com/181010/css-box-shadow-3.png)
+![基本使用](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181010-box-shadow-demo-3.png)
 
 **note**：在上面的图片中我们可以看出,当spread value不为0时，box shadow会有相对应的扩大或收缩(不管是不是inset)。这个时候，我们希望box的形状仍然有同样的视觉效果(尤其是存在 border radius的时候)，css 规范规定了如何对corner radii进行增加或减少，来达到视觉上的效果。
 
