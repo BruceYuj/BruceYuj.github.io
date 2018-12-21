@@ -71,9 +71,9 @@ outline和border的不同点：
       border: 5px solid green;
     }
 ```
-![outline-non-rectangular-chrome](http://oxnuwmm3w.bkt.clouddn.com/181023/outline-non-rectangular.PNG)
+![outline-non-rectangular-chrome](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181023-outline-non-rectangular.png)
 这是chrome、IE11和edge下的表现。
-![outline-non-rectangular-firefox](http://oxnuwmm3w.bkt.clouddn.com/181023/outline-non-rectangular-firefox.PNG)
+![outline-non-rectangular-firefox](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181023-outline-non-rectangular-firefox.png)
 这是firefox下的表现.
 
 **Note**: outline的位置可能会受到desendant box的影响。
@@ -91,7 +91,7 @@ outline和border的不同点：
   el.textContent = !!~navigator.appVersion.indexOf("Chrome") ? "Chrome" : "FireFox"
 </script>
 ```
-![enter description here](http://oxnuwmm3w.bkt.clouddn.com/181023/outline-desendant-box.png)
+![enter description here](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181023-outline-desendant-box.png)
 **Note**: This specification does not define the exact position or shape of the outline, but it is typically drawn immediately outside the border box.
 
 ### offsetting the outline: `outline-offset` property
@@ -101,11 +101,11 @@ outline和border的不同点：
 - 允许正负值，负值时outline会收缩，正值时会扩张。
 
 **Note**: 当outline的值为large negative value的时候，各个浏览器的表现是不一样的。
-![enter description here](http://oxnuwmm3w.bkt.clouddn.com/181023/outline-chrome.gif)
+![enter description here](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181023-outline-edge-chrome.gif)
 这是chrome下的表现，在outline-offset逐渐变小的时候，outline会变成十字形(具体的边界是在border-box的值 + outline-width的值，超过这个边界，outline会消失)
-![enter description here](http://oxnuwmm3w.bkt.clouddn.com/181023/outline-firefox.gif)
+![enter description here](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181023-outline-edge-firefox.gif)
 这是firefox下的表现
-![enter description here](http://oxnuwmm3w.bkt.clouddn.com/181023/outline-edge.gif)
+![enter description here](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181023-outline-edge.gif)
 这是edge下的表现
 
 **总结如下**：
