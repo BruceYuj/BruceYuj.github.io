@@ -1,7 +1,7 @@
 ---
 title: 试试讲明白pseudo-classes和pseudo-elements
 date: 2018/5/23 22:25:07
-cover: 
+cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/180523-pesudo-class-and-pseudo-element.png
 author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
