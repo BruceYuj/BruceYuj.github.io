@@ -1,7 +1,7 @@
 ---
 title: 详细理解CSS中的outline
 date: 2018/10/23 21:23:07
-cover: 
+cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/181023-CSS-outline.png
 author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
