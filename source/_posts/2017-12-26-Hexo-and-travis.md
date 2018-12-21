@@ -1,7 +1,7 @@
 ---
 title: 如何更'懒'的用Hexo和Travis CI搭建自己的blog
 date: 2017/12/26 22:25:07
-cover: 
+cover: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/171226-blog-with-Hexo-and-Travis-CI.png
 author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
