@@ -88,10 +88,10 @@ description: 该博客用来分享平时有意思的技术所得与各种思考
 introduction: 践行，乐观的悲观主义者
 
 # 博客的favicon图标，支持本地及在线两种方式，本地请将图标放置于 themes/hexo-theme-skapp/source/img 目录下
-favicon_ico: http://oxnuwmm3w.bkt.clouddn.com/yu.ico
+favicon_ico: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/yu.ico
 
 # 博客的左上角logo图标，支持本地及在线两种方式
-logo: http://oxnuwmm3w.bkt.clouddn.com/logo.png
+logo: https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/config/logo.png
 
 # 头像/二维码（用于显示在底部）二选一
 # avatar: http://oxnuwmm3w.bkt.clouddn.com/qrcode.png
