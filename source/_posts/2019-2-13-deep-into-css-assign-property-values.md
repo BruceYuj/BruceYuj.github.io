@@ -1,6 +1,6 @@
 ---
 title: 深入CSS之属性赋值
-date: 2019/2/12 10:23:07
+date: 2019/2/13 19:13:07
 cover: 	https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/2019-2-13-deep-into-css-assign-property-values.png
 author:
   nick: BruceYJ
