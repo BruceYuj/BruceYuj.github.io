@@ -17,6 +17,12 @@ categories:
 ---
 <!-- toc -->
 
+## 阅读注意事项
+
+1. 本篇文章的依赖主要是**CSS specification** 和 **html standard**。
+2. 本篇整体比较细节和理论，可能会看起来枯燥，我尽量讲的逻辑简单些。个人认为有时候阅读枯燥的理论文章是有必要的。
+3. 写这篇的文章主要目的在于完善自己的知识体系。因此希望大家能够多多指出文章中不恰当之地方。
+
 ## introduction
 在阅读[CSS2 visual formatting model details](https://www.w3.org/TR/2011/REC-CSS2-20110607/visudet.html#inline-width)时，里面出现了大量的关于`replaced element`和`non-replaced element`的概念。`visual formatting model details`中将element在`inline-level and block-level`和`replaced and non-replaced`两个不同的维度展开描述。因此，如果我们想要深入理解CSS的内部世界，那么理解`replaced element`的概念就是必不可少的了。
 
