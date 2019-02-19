@@ -1,6 +1,6 @@
 ---
 title: 深入CSS基础之box model
-date: 2019/2/13 19:13:07
+date: 2019/2/19 15:13:07
 cover: 	https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/190219-deep-into-css-box-model.png
 author:
   nick: BruceYJ
