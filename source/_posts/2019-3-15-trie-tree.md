@@ -1,6 +1,6 @@
 ---
-title: 深入CSS基础之box model
-date: 2019/2/19 15:13:07
+title: 算法之trie tree
+date: 2019/3/25 15:13:07
 cover: 	https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/190325-trie-tree.png
 author:
   nick: BruceYJ
@@ -8,7 +8,7 @@ author:
 editor:
   name: BruceYJ
   link: https://www.github.com/BruceYuj
-subtitle: CSS中的box model
+subtitle: trie tree
 tags:
 - Algorithm
 
