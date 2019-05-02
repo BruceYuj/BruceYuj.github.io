@@ -10,10 +10,10 @@ editor:
   link: https://www.github.com/BruceYuj
 subtitle: trie tree
 tags:
-- Algorithm
+- ECMAScript
 
 categories:
-- Algorithm
+- ECMAScript
 ---
 <!-- toc -->
 ---
@@ -81,9 +81,9 @@ categories:
 因此，53-bit的精度转换成10进制为16个十进制数字(53log10(2) 约等于15.955).
 
 ### 安全整数
-首先，我们给出结论，ECMAScript的安全整数范围为 **[-2^53^, 2^53^]**，那么为什么呢？
+首先，我们给出结论，ECMAScript的安全整数范围为 **[-2^53, 2^53]**，那么为什么呢？
 
-1. IEE754 64-bit无法表示2^53^ + 1，因为尾数只有52位，共有2^53^个选择，而2^53^ + 1，转换成科学计数法 2^53^ * (1+ 2^-53^)，IEEE754 64-bit是没有办法表示的。这样明显是不安全的。
+1. IEE754 64-bit无法表示2^53 + 1，因为尾数只有52位，共有2^53个选择，而2^53 + 1，转换成科学计数法 2^53 * (1+ 2^-53)，IEEE754 64-bit是没有办法表示的。这样明显是不安全的。
 
 ![enter description here](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/2019-5-2-ECMAScript-Number-type-and-IEEE-754-7.png)
 
@@ -91,13 +91,13 @@ categories:
 
 ![enter description here](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/2019-5-2-ECMAScript-Number-type-and-IEEE-754-9.png)
 
-但是对于2^53^ + 2，转换成科学计数法 2^54^ * (1+ 2^-52^)可以用IEEE754 64-bit表示。
+但是对于2^53 + 2，转换成科学计数法 2^54 * (1+ 2^-52)可以用IEEE754 64-bit表示。
 
 2. 根据上面的现象，IEEE754能够表示的浮点数可以抽象为:
-- **[2^53^, 2^54^]** 之间的数,IEEE754 64-bit能够表示的数都是可以被2整除的，两数之间的间隔为2.
-- **[2^54^, 2^55^]** 之间的数的间隔为4
-- 那么 **[2^51^, 2^52^]** 的数字与数字的间隔为0.5
-- 数学归纳法总结一下:The spacing as a fraction of the numbers in the range from 2^n^ to 2^n+1^ is 2^n−52^.
+- **[2^53, 2^54]** 之间的数,IEEE754 64-bit能够表示的数都是可以被2整除的，两数之间的间隔为2.
+- **[2^54, 2^55]** 之间的数的间隔为4
+- 那么 **[2^51, 2^52]** 的数字与数字的间隔为0.5
+- 数学归纳法总结一下:The spacing as a fraction of the numbers in the range from 2^n to 2^n+1 is 2^(n−52).
 
 ### 具体实现的64-bit precision案例
 ![enter description here](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/2019-5-2-ECMAScript-Number-type-and-IEEE-754-10.png)
@@ -107,17 +107,17 @@ categories:
 2. 引入了两个概念:subnormal double和normal double,下面的图基本能够表达两者之间的数学含义:
 ![enter description here](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/2019-5-2-ECMAScript-Number-type-and-IEEE-754-11.png)
 在计算机系统当中，一个未增强的floating-point system只能包含normalized numbers（上图中的红色），而允许subnormal numbers（蓝色）扩展了系统的数字范围，处于系统underflow gap（下溢）和0之间。下面用案例详细解释了两者之间的区别：
-- 在normal floating-point value当中，我们通过exponent（指数）的偏移来移除尾数(significand)的0(比如0.0123 = 1.23 * 10^-2^)。而subnormal numbers在significand中使用了leading zero，什么是leading zero具体看下面。
-- 在IEEE floating-point number当中，比如一个positive normalized number，通常可以表示为m~0~.m~1~m~2~...m~p-1~（m代表一个sidnificant digit, p是精度，m~0~不为0）。对于一个subnormal number, exponent是可能表示的最小的exponent，zero是significand digit （0.m~1~m~2~...m~p-1~），也就是说所有的subnormal number都比最小的normal number更接近0.
+- 在normal floating-point value当中，我们通过exponent（指数）的偏移来移除尾数(significand)的0(比如0.0123 = 1.23 * 10^-2)。而subnormal numbers在significand中使用了leading zero，什么是leading zero具体看下面。
+- 在IEEE floating-point number当中，比如一个positive normalized number，通常可以表示为m~0~.m~1~m~2~...m~p-1~（这里~2~表示的下标，m代表一个sidnificant digit, p是精度，m~0~不为0）。对于一个subnormal number, exponent是可能表示的最小的exponent，zero是significand digit （0.m~1~m~2~...m~p-1~），也就是说所有的subnormal number都比最小的normal number更接近0. 
 
 ### ECMASCript2015 specification: 6.1.6 Number Type
 **在ECMAScript规范当中，并没有直接用`s * 2^(e-1023) * M`这种表达方式，而是将M通过位移转换成整数，也就是`s * 2 ^ (e-1075) * M`. 这是需要注意的一点。**
 具体规范当中总结出来以下几点：
-1. 64 bit去掉一位符号位，可以表达为 **2^64^** 个不同的值，而IEEE754中**2^53^ - 2**个 "not-a-number"值在ECMAScript中统一表达为`NaN`，也就是说，Number type有(2^64^ - 2^53^ + 3)个不同的values。
+1. 64 bit去掉一位符号位，可以表达为 **2^64** 个不同的值，而IEEE754中**2^53 - 2**个 "not-a-number"值在ECMAScript中统一表达为`NaN`，也就是说，Number type有(2^64 - 2^53 + 3)个不同的values。
 2. 两个特殊的值，为`Infinity` 和 `-Infinity`, 这里两个值的exponent转换为二进制位11个1，mantissia全为0(二进制).具体可以看上一小节的图篇案例。
-3. 根据上面两点推断出，有2^64^ - 2^53^个finite numbers. 一半是positive numbers，另一半是negative numbers。也就是说这类值包含有`positive zero`和`negative zero`两个0值. 
-4. 也就是说，有2^64^ - 2^53^-2个非0的finite values，而这类值可以分为两类:
-   - normalized value ：共包含2^64^ - 2^54^个值，这类值的form是:
+3. 根据上面两点推断出，有2^64 - 2^53个finite numbers. 一半是positive numbers，另一半是negative numbers。也就是说这类值包含有`positive zero`和`negative zero`两个0值. 
+4. 也就是说，有2^64 - 2^53-2个非0的finite values，而这类值可以分为两类:
+   - normalized value ：共包含2^64 - 2^54个值，这类值的form是:
       `s * M * 2^e`, s是`+1`或`-1`, m是positive integer（`[2^52, 2^53)`）,e的范围是`[-1074, 951]`，这里可以看出ECMAScript的实现没有采用exponent bias的表达方式
   - denormalized number: 共有`2^53 - 2`个，公式仍然是:
      `s * M * 2^e`, s是`+1`或`-1`, m是positive integer（`(0, 2^52)`）,e的值为-1074
@@ -138,7 +138,7 @@ categories:
 ![enter description here](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/2019-5-2-ECMAScript-Number-type-and-IEEE-754-12.png)
 
 ### 为什么`x=0.1`能得到`0.1`
-在ECMAScript当中，没有使用IEEE754的exponent bias，而是把mantissa当中是整数，exponent为`[-1024,951]`，而2^53^的十进制表示最多16位有效数字，也是最大表示的进度:
+在ECMAScript当中，没有使用IEEE754的exponent bias，而是把mantissa当中是整数，exponent为`[-1024,951]`，而2^53的十进制表示最多16位有效数字，也是最大表示的进度:
 ![](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/2019-5-2-ECMAScript-Number-type-and-IEEE-754-13.png)
 
 ## 我们该如何处理这类浮点误差问题
