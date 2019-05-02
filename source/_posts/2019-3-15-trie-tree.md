@@ -15,12 +15,7 @@ tags:
 categories:
 - Algorithm
 ---
-<!-- toc -->---
-title: Trie tree 
-tags: algorithms
-grammar_cjkRuby: true
----
-[toc]
+<!-- toc -->
 
 ---
 ## introduction
