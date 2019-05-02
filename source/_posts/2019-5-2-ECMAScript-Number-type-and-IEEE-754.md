@@ -8,7 +8,7 @@ author:
 editor:
   name: BruceYJ
   link: https://www.github.com/BruceYuj
-subtitle: trie tree
+subtitle: 浮点数的误差
 tags:
 - ECMAScript
 
