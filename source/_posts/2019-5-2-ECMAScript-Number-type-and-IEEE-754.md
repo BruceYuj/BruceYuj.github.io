@@ -25,6 +25,8 @@ categories:
 无论是google一下或者baidu一下，这类文章层出不穷，但是很多都是浅尝即止，无法让我能够逻辑通顺的理解。在所有阅读的中文资料当中，我觉得较优秀的是camsong同学的[抓住数据的尾巴](https://zhuanlan.zhihu.com/p/30703042)，有些图是直接借鉴该同学的(会注明)，但是这篇文章的一个问题是，对于某些数学上的区间表示不清楚，比如究竟是开区间还是闭区间。因此，我写下了该篇文章。
 主要阅读的资料来源: ECMAScript 2015, ECMAScript 2018, wiki, etc.
 
+首先，给出整篇文章的思维导图：
+![](https://myblog-1257043911.cos.ap-chengdu.myqcloud.com/posts/2019-5-2-ECMAScript-Number-type-and-IEEE-754-mindmap.png)
 ### 前置知识
 1. 代数数学告诉我们实数(real number)包含有理数(rational number)和无理数:
 - 有理数是一个整数a和一个正整数b的比(`a/b`),是整数和分数的集合，整数可以看成分母为1的分数，有理数的小数部分是有限的或为无限循环的数。
